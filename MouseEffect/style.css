@@ -1,0 +1,61 @@
+:root{
+    --b:#7C96AB;
+    --d:#EDC6B1;
+}
+
+body{
+    background-color: #2C3333;
+}
+
+.follow{
+    z-index: -1;
+    position:absolute;
+    top:0px;
+    left:0px;
+
+    height:300px;
+    width:250px;
+    
+    filter:blur(100px);
+    background-image: linear-gradient(var(--b),var(--d));
+    
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        height:350px;
+        width: 280px;
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+/* clever way to make oval not an actual oval, using 
+    border radius ! */
+.oval {
+    border-radius: 50%;
+}
+
+h1,p{
+    display:flex;
+    justify-content: center;
+    opacity:0.3;
+    color: #FBFCF8;
+    font-family: 'Segoe UI';
+    transition:0.3s;
+}
+
+h1:hover,p:hover {
+    opacity: 1;
+}
+
